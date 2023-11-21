@@ -1,7 +1,8 @@
 import yaml
 import json
 
-yamlDocument = """
+yamlDocument = \
+"""
 ---
 - item    : Super Hoop
   quantity: 1
@@ -10,7 +11,5 @@ yamlDocument = """
 - item    : Big Shoes
   quantity: 1
 """
-JSONned = ""
-inputYAML = open("../var/")
-deserialized = yaml.load(yamlDocument)
-print(json.load(deserialized))
+deserialized = yaml.load(yamlDocument, None)
+print(json.dumps(deserialized, indent = 4))
